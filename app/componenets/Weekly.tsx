@@ -11,10 +11,18 @@ const Weekly: FC<Props> = props => {
   return (
     <View style={styles.container}>
       <Image source={props.image} style={styles.imageStyle} />
-      <Text style={styles.textDeal}>HOT DEALS</Text>
-      <Text style={styles.textTitle}>{props.title}</Text>
-      <CustomIcons.FontAwesome5 name={'arrow-left'} color={'red'} size={10} />
-      <Text style={styles.textExplore}>EXPLORE & SHOP</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.textDeal}>HOT DEALS</Text>
+        <Text style={styles.textTitle}>{props.title}</Text>
+        <Text style={styles.textExplore}>
+          <CustomIcons.FontAwesome5
+            name={'arrow-left'}
+            color={'red'}
+            size={10}
+          />
+          EXPLORE & SHOP
+        </Text>
+      </View>
     </View>
   );
 };
@@ -38,14 +46,17 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   textTitle: {
-    marginTop: 8,
-    marginLeft: 8,
     fontWeight: '900',
     color: 'black',
   },
   textExplore: {
     fontWeight: '600',
     color: 'red',
+  },
+  textContainer: {
+    height: 90,
+    paddingHorizontal: 10,
+    justifyContent: 'space-around',
   },
 });
 
