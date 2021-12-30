@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import Feed from './app/screens/feed';
+import Feed from './app/screens/Feed';
 
 const App: FC = () => {
   return <Feed />;
